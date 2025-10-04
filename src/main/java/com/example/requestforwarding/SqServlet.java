@@ -13,6 +13,7 @@ public class SqServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         int k =  (int) session.getAttribute("k");
+//        session.removeAttribute("k");
         PrintWriter out = response.getWriter();
         out.println("<h2>Square of sum is: "+k*k);
 
