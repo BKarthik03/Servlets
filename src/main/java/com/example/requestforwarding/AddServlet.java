@@ -2,10 +2,7 @@ package com.example.requestforwarding;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
+import jakarta.servlet.http.*;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,8 +14,8 @@ public class AddServlet extends HttpServlet {
 
         int k = i+j;
 
-        HttpSession session = req.getSession();
-        session.setAttribute("k",k);
+        Cookie cookie = new Cookie("k",String.valueOf(k));
+        resp.addCookie(cookie);
 
         resp.sendRedirect("sq");
 
