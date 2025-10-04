@@ -9,10 +9,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class SqServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int k =  (int) request.getAttribute("k");
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int k = Integer.parseInt(request.getParameter("k"));
         PrintWriter out = response.getWriter();
-        out.println(k*k);
+        out.println("<h2>Square of sum is: "+k*k+"</h2>");
 
     }
 }
