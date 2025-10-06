@@ -8,13 +8,16 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 @WebServlet("/DemoServlet")
 public class DemoServlet extends HttpServlet {
-    public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        String subject = "java";
+    @Override
+    protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
-        req.setAttribute("subject", subject);
         RequestDispatcher rd = req.getRequestDispatcher("Demo.jsp");
-        rd.forward(req,res);
+        rd.forward(req, res);
     }
 }
