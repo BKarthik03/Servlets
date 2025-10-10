@@ -21,6 +21,6 @@
 <!--        <param-value>Java</param-value>-->
 <!--    </context-param>-->
     <welcome-file-list>
-        <welcome-file>Demo.jsp</welcome-file>
+        <welcome-file>Form.jsp</welcome-file>
     </welcome-file-list>
 </web-app>
