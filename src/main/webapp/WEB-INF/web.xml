@@ -20,7 +20,7 @@
 <!--        <param-name>subject</param-name>-->
 <!--        <param-value>Java</param-value>-->
 <!--    </context-param>-->
-    <welcome-file-list>
-        <welcome-file>Form.jsp</welcome-file>
-    </welcome-file-list>
+<welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+</welcome-file-list>
 </web-app>
