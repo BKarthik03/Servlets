@@ -11,7 +11,13 @@
     <title>Title</title>
 </head>
 <body>
+
+
 <%
+
+    response.setHeader("Cache-Control","no-cache, no-store, must-validate");
+    response.setHeader("Pragma","no-cache");//for Http older than 1.1
+    response.setHeader("Expires","0");//Proxies
     if(session.getAttribute("uname")==null){
         response.sendRedirect("login.jsp");
     }

@@ -12,11 +12,14 @@
 </head>
 <body>
     <%
+
+        response.setHeader("Cache-Control","no-cache, no-store, must-validate");
+        response.setHeader("Pragma","no-cache");//for Http older than 1.1
+        response.setHeader("Expires","0");//Proxies
         if(session.getAttribute("uname")==null){
             response.sendRedirect("login.jsp");
         }
     %>
-    https://www.youtube.com/watch?v=cYc3FjhMMzI&list=PLsyeobzWxl7pUPF2xjjJiG4BKC9x_GY46&index=32
-
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/gQLQ0t9B5yk?si=E3i89Esy6ISQZ1iT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </body>
 </html>
